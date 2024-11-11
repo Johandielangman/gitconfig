@@ -31,6 +31,7 @@
 	# Create a new branch based on the current branch and publish it
 	nb = "!f() { git checkout -b \"$1\" && git push -u origin \"$1\"; }; f"
 	nbm = "!f() { git checkout main && git pull && git checkout -b \"$1\" && git push -u origin \"$1\"; }; f"
+	publish = push -u origin HEAD
 
 	# Tags
 	latest-tag = !git tag --sort=-v:refname | head -n 1
